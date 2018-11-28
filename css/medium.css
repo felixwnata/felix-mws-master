@@ -1,0 +1,47 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hide-on-medium-small {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .konten {
+    grid-column: 1/-1;
+  }
+
+  .footer {
+    padding: 0 0 50px 0;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .rigth {
+    width: 50%;
+    text-align: right !important;
+  }
+
+  .left-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .right-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .left-button > input {
+    width: 22% !important;
+  }
+
+  .right-button > input {
+    width: 46% !important;
+  }
+}

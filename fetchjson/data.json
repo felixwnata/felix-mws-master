@@ -1,0 +1,44 @@
+{
+  "places": [
+    {
+      "lokasi": [-6.221028, 106.791434],
+      "location": "Jalan Tentara Pekerja, Grogol",
+      "phone": "81238417",
+      "sponsor": "Resto Spanyol",
+      "gambar": "../img/planB.jpg",
+      "review": "Restoran Spanyol terbaik di Jakarta"
+    },
+    {
+      "lokasi": [-6.219912, 106.791239],
+      "location": "Jalan Suka Suka, Grogol",
+      "phone": "09876789",
+      "sponsor": "Warung Kopi",
+      "gambar": "../img/warkop.jpg",
+      "review": "Warung kopi cita rasa yang sangat tinggi dengan harga murah"
+    },
+    {
+      "lokasi": [-6.220529, 106.789848],
+      "location": "Jalan Nyasar, Grogol",
+      "phone": "01923023",
+      "sponsor": "Pondok Ikan Bakar",
+      "gambar": "../img/ikan_bakar.jpg",
+      "review": "Ikan bakar kualitas tinggi, hampir gosong tapi belum"
+    },
+    {
+      "lokasi": [-6.222977, 106.789152],
+      "location": "Permata Hijau, Grogol",
+      "phone": "12345678",
+      "sponsor": "STEAK cow",
+      "gambar": "../img/steak.jpg",
+      "review": "Steak lokal harga impor, 200gr dan 300gr mentah"
+    },
+    {
+      "lokasi": [-6.222043, 106.79107],
+      "location": "Jalan Tentara Pelajar, Grogol",
+      "phone": "87654321",
+      "sponsor": "Rupa-rupa Seafood!!",
+      "gambar": "../img/seafood.jpg",
+      "review": "seafood international lobster, king crabs, cumi, kerang, semua ada"
+    }
+  ]
+}

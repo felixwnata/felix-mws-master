@@ -1,0 +1,71 @@
+.table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.table td {
+  padding: 10px;
+}
+
+.table-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+.table-input:focus,
+.table-input:hover {
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: gray;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.left-button {
+  float: left !important;
+}
+
+.right-button {
+  float: right !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .left-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .right-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .left-button > input {
+    width: 22% !important;
+  }
+
+  .right-button > input {
+    width: 46% !important;
+  }
+}

@@ -1,0 +1,51 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hide-on-medium-small {
+    display: none;
+  }
+
+  .mapid {
+    height: 300px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .konten {
+    grid-column: 1/-1;
+  }
+
+  .footer {
+    padding: 0 0 50px 0;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .rigth {
+    width: 50%;
+    text-align: right !important;
+  }
+
+  .left-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .right-button {
+    float: none;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .left-button > input {
+    width: 22% !important;
+  }
+
+  .right-button > input {
+    width: 46% !important;
+  }
+}
