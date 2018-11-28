@@ -24,3 +24,15 @@
     width: 80%;
   }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .mapid {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .mapid {
+    height: 600px;
+  }
+}

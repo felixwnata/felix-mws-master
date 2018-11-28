@@ -1,135 +1,177 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MWS Assignment</title>
 
-	<title>MWS Assignment</title>
+    <link rel="stylesheet" href="../css/mygrid.css" />
+    <link rel="stylesheet" href="kalkulator.css" />
+  </head>
 
-	<link rel="stylesheet" href="../css/mygrid.css">
-	<link rel="stylesheet" href="kalkulator.css">
-</head>
+  <body>
+    <div class="grid-box-konten">
+      <div class="header">
+        <div class="flex-box h-100 hide-on-medium-small">
+          <div class="flex-box-0 w-25">
+            <img src="../img/logo.svg" class="top-nav-logo" />
+          </div>
+          <div>
+            <ul class="top-nav">
+              <li>
+                <a href="../fetchjson/index.html">
+                  <img class="top-nav-icon" src="../icon/map-marker.svg" /> JSon
+                </a>
+              </li>
+              <li>
+                <a href="../mapbox/index.html">
+                  <img class="top-nav-icon" src="../icon/map.svg" /> MapBox
+                </a>
+              </li>
+              <li>
+                <a href="../kalkulator/index.html">
+                  <img class="top-nav-icon" src="../icon/calculator.svg" />
+                  Kalkulator
+                </a>
+              </li>
+              <li>
+                <a href="../index.html">
+                  <img class="top-nav-icon" src="../icon/home.svg" /> Home
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<body>
-	<div class="grid-box-konten">
-		<div class="header">
-			<div class="flex-box h-100 hide-on-medium-small">
-				<div class="flex-box-0">
-					<img src="../img/logo.svg" class="top-nav-logo" />
-				</div>
-				<div>
-					<ul class="top-nav">
-						<li>
-							<a href="../fetchjson/index.html">
-								<img class="top-nav-icon" src="../icon/map-marker.svg" />
-								JSon
-							</a>
-						</li>
-						<li>
-							<a href="../mapbox/index.html">
-								<img class="top-nav-icon" src="../icon/map.svg" />
-								MapBox
-							</a>
-						</li>
-						<li>
-							<a href="../kalkulator/index.html">
-								<img class="top-nav-icon" src="../icon/calculator.svg" />
-								Kalkulator
-							</a>
-						</li>
-						<li>
-							<a href="../index.html">
-								<img class="top-nav-icon" src="../icon/home.svg" />
-								Home
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+      <div class="menu"><h2 class="konten-title">Kalkulator</h2></div>
 
-		<div class='menu'>
-			<h2 class="konten-title">Kalkulator</h2>
-		</div>
+      <div class="konten">
+        <div class="container">
+          <table class="table">
+            <tr>
+              <td>
+                <h3>First Number</h3>
+                <br />
+                <input
+                  type="number"
+                  id="txtFNumber"
+                  placeholder="First Numbers"
+                  class="table-input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>Second Number</h3>
+                <br />
+                <input
+                  type="number"
+                  id="txtSNumber"
+                  placeholder="Second Numbers"
+                  class="table-input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>Action</h3>
+                <br />
+                <input
+                  type="text"
+                  id="txtAction"
+                  placeholder="Action"
+                  disabled
+                  class="table-input"
+                />
+                <br /><br />
+                <div class="left-button button_small_device">
+                  <input
+                    type="button"
+                    id="btnPlus"
+                    value="+"
+                    onclick="changeaction(this)"
+                  />
+                  <input
+                    type="button"
+                    id="btnMin"
+                    value="-"
+                    onclick="changeaction(this)"
+                  />
+                  <input
+                    type="button"
+                    id="btnTimes"
+                    value="*"
+                    onclick="changeaction(this)"
+                  />
+                  <input
+                    type="button"
+                    id="btnDev"
+                    value="/"
+                    onclick="changeaction(this)"
+                  />
+                </div>
+                <div class="right-button button_small_device">
+                  <input
+                    type="button"
+                    id="btnCal"
+                    value="Calculate"
+                    onclick="calculate()"
+                  />
+                  <input
+                    type="button"
+                    id="btnClear"
+                    value="Clear"
+                    onclick="clearing()"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>Result</h3>
+                <br />
+                <input
+                  type="text"
+                  id="txtResult"
+                  placeholder="Result"
+                  disabled
+                  class="table-input"
+                />
+              </td>
+            </tr>
+          </table>
 
-		<div class="konten">
-			<div class="container">
-				<table class="table">
-					<tr>
-						<td>
-							<h3>First Number</h3>
-							<br />
-							<input type="number" id="txtFNumber" placeholder="First Numbers" class="table-input">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<h3>Second Number</h3>
-							<br />
-							<input type="number" id="txtSNumber" placeholder="Second Numbers" class="table-input">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<h3>Action</h3>
-							<br />
-							<input type="text" id="txtAction" placeholder="Action" disabled class="table-input">
-							<br /><br />
-							<div class="left-button button_small_device">
-								<input type="button" id="btnPlus" value="+" onclick="changeaction(this)">
-								<input type="button" id="btnMin" value="-" onclick="changeaction(this)">
-								<input type="button" id="btnTimes" value="*" onclick="changeaction(this)">
-								<input type="button" id="btnDev" value="/" onclick="changeaction(this)">
-							</div>
-							<div class="right-button button_small_device">
-								<input type="button" id="btnCal" value="Calculate" onclick="calculate()">
-								<input type="button" id="btnClear" value="Clear" onclick="clearing()">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<h3>Result</h3>
-							<br />
-							<input type="text" id="txtResult" placeholder="Result" disabled class="table-input">
-						</td>
-					</tr>
-				</table>
-				<div class="devider-for-space"><br/></div>
-			</div>
-		</div>
+          <div class="devider-for-space"><br /></div>
+        </div>
+      </div>
 
-		<div class="footer hide-on-large">
-			<ul class="botnav">
-				<li>
-					<a href="../index.html">
-					<img class=" footer-icon" src="../icon/home.svg" />
-					Home
-					</a>
-				</li>
-				<li>
-					<a href="../kalkulator/index.html">
-					<img class="footer-icon" src="../icon/calculator.svg" />
-					Angka
-					</a>
-				</li>
-				<li>
-					<a href="../mapbox/index.html">
-					<img class="footer-icon" src="../icon/map.svg" />
-					MapBox
-					</a>
-				</li>
-				<li>
-					<a href="../fetchjson/index.html">
-					<img class="footer-icon" src="../icon/map-marker.svg" />
-					JSon
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<script src="kalkulator.js"></script>
-</body>
-
+      <div class="footer hide-on-large">
+        <ul class="botnav">
+          <li>
+            <a href="../index.html">
+              <img class=" footer-icon" src="../icon/home.svg" /> Home
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="active">
+              <img class="footer-icon" src="../icon/calculator.svg" /> Angka
+            </a>
+          </li>
+          <li>
+            <a href="../mapbox/index.html">
+              <img class="footer-icon" src="../icon/map.svg" /> MapBox
+            </a>
+          </li>
+          <li>
+            <a href="../fetchjson/index.html">
+              <img class="footer-icon" src="../icon/map-marker.svg" /> JSon
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="kalkulator.js"></script>
+  </body>
 </html>

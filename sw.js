@@ -1,5 +1,5 @@
-var CACHE_STATIC = "static-v1";
-var CACHE_DYNAMIC = "dynamic-v1";
+var CACHE_STATIC = "static-v2";
+var CACHE_DYNAMIC = "dynamic-v2";
 var STATIC_FILES = ["/", "/index.html"];
 
 self.addEventListener("install", function(event) {
